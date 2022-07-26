@@ -9,6 +9,7 @@ use super::{index::RawIndex, RingBuffer};
 use array_ops::HasLength;
 
 /// A reference iterator over a `RingBuffer`.
+#[derive(Clone)]
 pub struct Iter<'a, A, const N: usize> {
     pub(crate) buffer: &'a RingBuffer<A, N>,
     pub(crate) left_index: RawIndex<N>,

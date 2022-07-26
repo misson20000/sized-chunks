@@ -3,6 +3,7 @@ use bitmaps::{Bitmap, Bits, BitsImpl, Iter as BitmapIter};
 use super::SparseChunk;
 
 /// An iterator over references to the elements of a `SparseChunk`.
+#[derive(Debug, Clone)]
 pub struct Iter<'a, A, const N: usize>
 where
     BitsImpl<N>: Bits,
